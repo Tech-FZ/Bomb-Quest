@@ -30,40 +30,40 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body.get_name().begins_with("Wall"):
-		if position.x <= body.position.x + 14.5:
+		if position.x <= body.position.x + 14:
 			right_possible = false
 			
-			if (body.position.x - 14.5 >= body.position.y + 14.5) == false:
+			if (position.y <= body.position.y + 14) == false:
 				down_possible = true
 				
-			if (body.position.x - 14.5 >= body.position.y - 14.5) == false:
+			if (position.y >= body.position.y - 14) == false:
 				up_possible = true
 			
-		if position.x >= body.position.x - 14.5:
+		if position.x >= body.position.x - 14:
 			left_possible = false
 			
-			if (body.position.x - 14.5 <= body.position.y + 14.5) == false:
+			if (position.y <= body.position.y + 14) == false:
 				down_possible = true
 				
-			if (body.position.x - 14.5 <= body.position.y - 14.5) == false:
+			if (position.y >= body.position.y - 14) == false:
 				up_possible = true
 			
-		if position.y <= body.position.y + 14.5:
+		if position.y <= body.position.y + 14:
 			down_possible = false
 			
-			if (body.position.y + 14.5 >= body.position.x + 14.5) == false:
+			if (position.x <= body.position.x + 14) == false:
 				right_possible = true
 				
-			if (body.position.y + 14.5 >= body.position.x - 14.5) == false:
+			if (position.x >= body.position.x - 14) == false:
 				left_possible = true
 			
-		if position.y >= body.position.y - 14.5:
+		if position.y >= body.position.y - 14:
 			up_possible = false
 			
-			if (body.position.y - 14.5 <= body.position.x + 14.5) == false:
+			if (position.x <= body.position.x + 14) == false:
 				right_possible = true
 				
-			if (body.position.y - 14.5 <= body.position.x - 14.5) == false:
+			if (position.x >= body.position.x - 14) == false:
 				left_possible = true
 
 

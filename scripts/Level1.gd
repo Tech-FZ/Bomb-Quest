@@ -2,7 +2,7 @@ extends Node
 
 # Declare member variables here. Examples:
 var gameStarted = false
-
+var bombTaskScene = preload("res://scenes/BombTask1.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,11 +19,12 @@ func _process(delta):
 
 func _on_Bomb_body_entered(body):
 	if body.get_name() == "Player":
-		# Please note that this is only placeholder code
-		get_tree().change_scene("res://scenes/MainMenu.tscn")
-		# End of placeholder code
-
-
+		var bombTaskInstance = bombTaskScene.instance()
+		add_child(bombTaskInstance)
+		$Player.left_possible = false
+		$Player.right_possible = false
+		$Player.up_possible = false
+		$Player.down_possible = false
 
 func _on_StartTimer_timeout():
 	gameStarted = true

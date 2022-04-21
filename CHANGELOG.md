@@ -1,3 +1,8 @@
+# Bomb Quest, Pre-Alpha 4
+- Added task to neutralize bomb
+- Reduced time to do so from 80 to 60 seconds
+- Corrected menu
+
 # Bomb Quest, Pre-Alpha 3
 - Collision detection fixed (kinda)
 

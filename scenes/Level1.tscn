@@ -292,7 +292,7 @@ position = Vector2( 140, 61 )
 position = Vector2( 140, 5 )
 
 [node name="BombTimer" type="Timer" parent="."]
-wait_time = 80.0
+wait_time = 60.0
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 3.0

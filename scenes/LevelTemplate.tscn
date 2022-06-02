@@ -190,6 +190,17 @@ position = Vector2( 58.557, 629 )
 [node name="Wall58" parent="Border" instance=ExtResource( 1 )]
 position = Vector2( 0.373, 629 )
 
+[node name="BombTimer" type="Timer" parent="."]
+wait_time = 60.0
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="TimeLabel" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
 [connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Player/Area2D" to="Player" method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="Bomb" to="." method="_on_Bomb_body_entered"]

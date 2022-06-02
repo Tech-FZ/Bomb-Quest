@@ -1,3 +1,7 @@
+# Bomb Quest, Pre-Alpha 5
+- Added CONTRIBUTORS.md
+- New player (Thanks, CassyDream)
+
 # Bomb Quest, Pre-Alpha 4
 - Added task to neutralize bomb
 - Reduced time to do so from 80 to 60 seconds

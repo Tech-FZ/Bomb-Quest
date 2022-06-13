@@ -33,7 +33,7 @@ func _on_ArrowBody_player_succeeded_in_part():
 	elif lvlpart == 3:
 		$LevelPart2/Target/Sprite.texture = load("res://assets/task_component2_green.png")
 		$ArrowBody.success_possible = false
-		get_tree().change_scene("res://scenes/MainMenu.tscn")
+		get_tree().change_scene("res://scenes/Level1Success.tscn")
 
 
 func _on_ArrowBody_player_tries_again():

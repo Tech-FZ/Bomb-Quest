@@ -1,3 +1,9 @@
+# Bomb Quest, Alpha 1
+- Added armored player
+- Added samurai
+- Added second level
+- Added Source Serif Pro as the main font for the game
+
 # Bomb Quest, Pre-Alpha 5
 - Added CONTRIBUTORS.md
 - New player (Thanks, CassyDream)

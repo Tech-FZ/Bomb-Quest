@@ -3,9 +3,12 @@ extends Node
 # Declare member variables here. Examples:
 var gameStarted = false
 var bombTaskScene = preload("res://scenes/BombTask1.tscn")
+var player_hearts = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Player/AnimatedSprite.animation = "default"
+	$Player.moving_left = false
 	$StartTimer.start()
 
 
@@ -35,5 +38,17 @@ func _on_StartTimer_timeout():
 	$Player.down_possible = true
 
 func _on_BombTimer_timeout():
-	# It probably gets more complex here
-	get_tree().change_scene("res://scenes/Level1.tscn")
+	get_tree().change_scene("res://scenes/Level1Fail.tscn")
+
+
+func _on_Player_lost_heart():
+	if player_hearts == 3:
+		$Hearts/Heart3.texture = "res://assets/heart_away.png"
+	
+	elif player_hearts == 2:
+		$Hearts/Heart2.texture = "res://assets/heart_away.png"
+		
+	elif player_hearts == 1:
+		get_tree().change_scene("res://scenes/Level1Fail.tscn")
+	
+	player_hearts -= 1

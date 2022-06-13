@@ -7,9 +7,7 @@ var left_possible = false
 var right_possible = false
 var up_possible = false
 var down_possible = false
-var moving_left = false
-var already_left = false
-signal lost_heart
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,29 +16,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if Input.is_action_pressed("move_left"):
-		moving_left = true
-		if left_possible:
-			position.x -= velocity.x / delta / 100
-
-	if Input.is_action_pressed("move_right"):
-		moving_left = false
-		if right_possible:
-			position.x += velocity.x / delta / 100
-		
-	if Input.is_action_pressed("move_up") and up_possible:
-		position.y -= velocity.x / delta / 100
-		
-	if Input.is_action_pressed("move_down") and down_possible:
-		position.y += velocity.x / delta / 100
-	
-	if moving_left == true and already_left == false:
-		scale.x *= -1
-		already_left = true
-		
-	elif moving_left == false and already_left == true:
-		scale.x *= -1
-		already_left = false
+	pass
 
 func _on_Area2D_body_entered(body):
 	if body.get_name().begins_with("Wall"):
@@ -87,9 +63,3 @@ func _on_Area2D_body_exited(body):
 		right_possible = true
 		up_possible = true
 		down_possible = true
-
-
-func _on_Area2D_area_entered(area):
-	if area.get_name() == "EnemyWeaponRange":
-		emit_signal("lost_heart")
-

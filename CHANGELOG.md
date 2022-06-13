@@ -3,6 +3,7 @@
 - Added samurai
 - Added second level
 - Added Source Serif Pro as the main font for the game
+- Edited the About screen.
 
 # Bomb Quest, Pre-Alpha 5
 - Added CONTRIBUTORS.md

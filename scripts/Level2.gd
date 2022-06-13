@@ -2,8 +2,7 @@ extends Node
 
 # Declare member variables here. Examples:
 var gameStarted = false
-# will be replaced
-var bombTaskScene = preload("res://scenes/BombTask1.tscn")
+var bombTaskScene = preload("res://scenes/BombTask2.tscn")
 var player_hearts = 3
 var heartAway = preload("res://assets/heart_away.png")
 var samurai_left = true
@@ -54,6 +53,12 @@ func _on_Bomb_body_entered(body):
 		$Player.right_possible = false
 		$Player.up_possible = false
 		$Player.down_possible = false
+		
+		if has_node("Samurai"):
+			$Samurai.left_possible = false
+			$Samurai.right_possible = false
+			$Samurai.up_possible = false
+			$Samurai.down_possible = false
 
 func _on_StartTimer_timeout():
 	gameStarted = true

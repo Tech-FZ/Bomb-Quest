@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/wrestler.png" type="Texture" id=1]
+[ext_resource path="res://scripts/Wrestler.gd" type="Script" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 32.0
+height = 2.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 38, 32 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 12.5, 32 )
+
+[node name="Wrestler" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 21, -2.38419e-07 )
+scale = Vector2( 0.432129, 0.432129 )
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 7, 0 )
+shape = SubResource( 4 )
+
+[node name="EnemyWeaponRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyWeaponRange"]
+position = Vector2( 32.5, 0 )
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

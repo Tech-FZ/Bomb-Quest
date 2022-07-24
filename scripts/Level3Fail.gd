@@ -21,8 +21,4 @@ func _on_MainMenuBtn_pressed():
 
 
 func _on_TryAgainBtn_pressed():
-	get_tree().change_scene("res://scenes/Level2.tscn")
-
-
-func _on_Level3Btn_pressed():
 	get_tree().change_scene("res://scenes/Level3.tscn")

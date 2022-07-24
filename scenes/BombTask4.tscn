@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/BombTask4.gd" type="Script" id=1]
+[ext_resource path="res://assets/task_bg.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/SourceSerifPro/SourceSerifPro-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://fonts/SourceSerifPro/SourceSerifPro-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+font_data = SubResource( 5 )
+
+[node name="BombTask4" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+texture = ExtResource( 2 )
+
+[node name="TaskLabel" type="Label" parent="."]
+margin_left = 264.0
+margin_top = 115.0
+margin_right = 758.0
+margin_bottom = 188.0
+custom_fonts/font = SubResource( 2 )
+text = "Which word is the odd one out?"
+autowrap = true
+
+[node name="TryLabel" type="Label" parent="."]
+margin_left = 695.0
+margin_top = 121.0
+margin_right = 749.0
+margin_bottom = 142.0
+custom_fonts/font = SubResource( 6 )
+text = "Tries: 1"
+
+[node name="AppleButton" type="Button" parent="."]
+margin_left = 277.0
+margin_top = 192.0
+margin_right = 326.0
+margin_bottom = 212.0
+text = "Tree"
+
+[node name="CarrotButton" type="Button" parent="."]
+margin_left = 277.0
+margin_top = 450.0
+margin_right = 327.0
+margin_bottom = 470.0
+text = "Flower"
+
+[node name="BananaButton" type="Button" parent="."]
+margin_left = 687.0
+margin_top = 192.0
+margin_right = 745.0
+margin_bottom = 212.0
+text = "Grass"
+
+[node name="StrawberryButton" type="Button" parent="."]
+margin_left = 667.0
+margin_top = 450.0
+margin_right = 746.0
+margin_bottom = 470.0
+text = "Squirrel"
+
+[connection signal="pressed" from="AppleButton" to="." method="_on_AppleButton_pressed"]
+[connection signal="pressed" from="CarrotButton" to="." method="_on_CarrotButton_pressed"]
+[connection signal="pressed" from="BananaButton" to="." method="_on_BananaButton_pressed"]
+[connection signal="pressed" from="StrawberryButton" to="." method="_on_StrawberryButton_pressed"]

@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scripts/BombTask2.gd" type="Script" id=1]
+[ext_resource path="res://assets/task_bg.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/SourceSerifPro/SourceSerifPro-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://fonts/SourceSerifPro/SourceSerifPro-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 26
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://fonts/SourceSerifPro/SourceSerifPro-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://fonts/SourceSerifPro/SourceSerifPro-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 18
+font_data = SubResource( 7 )
+
+[node name="BombTask2" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+texture = ExtResource( 2 )
+
+[node name="TaskLabel" type="Label" parent="."]
+margin_left = 264.0
+margin_top = 115.0
+margin_right = 758.0
+margin_bottom = 188.0
+custom_fonts/font = SubResource( 2 )
+text = "I think of a number, add 7, multiply by 4, subtract 10 and get 34 as a result. What number is it?"
+autowrap = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 273.0
+margin_top = 191.0
+margin_right = 406.0
+margin_bottom = 231.0
+custom_fonts/font = SubResource( 4 )
+
+[node name="CheckBtn" type="Button" parent="."]
+margin_left = 433.0
+margin_top = 198.0
+margin_right = 532.0
+margin_bottom = 218.0
+text = "Check answer"
+
+[node name="TryLabel" type="Label" parent="."]
+margin_left = 567.0
+margin_top = 197.0
+margin_right = 621.0
+margin_bottom = 218.0
+custom_fonts/font = SubResource( 6 )
+text = "Tries: 1"
+
+[node name="HintLabel" type="Label" parent="."]
+margin_left = 268.0
+margin_top = 259.0
+margin_right = 757.0
+margin_bottom = 478.0
+custom_fonts/font = SubResource( 8 )
+text = "Your answer was not correct. Please try again."
+autowrap = true
+
+[connection signal="pressed" from="CheckBtn" to="." method="_on_CheckBtn_pressed"]

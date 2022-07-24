@@ -1,0 +1,208 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Wall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/Level1.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Bomb.tscn" type="PackedScene" id=4]
+
+[node name="Level1" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 55, 550 )
+
+[node name="Bomb" parent="." instance=ExtResource( 4 )]
+position = Vector2( 942, 49 )
+
+[node name="Border" type="Node2D" parent="."]
+
+[node name="Wall" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, 572 )
+
+[node name="Wall2" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, 513.575 )
+
+[node name="Wall3" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, 455.537 )
+
+[node name="Wall4" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, 397.362 )
+
+[node name="Wall5" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, 339.365 )
+
+[node name="Wall6" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, 280.818 )
+
+[node name="Wall7" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, 222.57 )
+
+[node name="Wall8" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, 164.046 )
+
+[node name="Wall9" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, 105.77 )
+
+[node name="Wall10" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, 47.317 )
+
+[node name="Wall11" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( -29, -10.812 )
+
+[node name="Wall12" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 29, -29 )
+
+[node name="Wall13" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 87.408, -29 )
+
+[node name="Wall14" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 146.039, -29 )
+
+[node name="Wall15" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 204.885, -29 )
+
+[node name="Wall16" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 263.568, -29 )
+
+[node name="Wall17" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 322.043, -29 )
+
+[node name="Wall18" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 380.26, -29 )
+
+[node name="Wall19" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 438.408, -29 )
+
+[node name="Wall20" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 496.722, -29 )
+
+[node name="Wall21" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 554.926, -29 )
+
+[node name="Wall22" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 613.107, -29 )
+
+[node name="Wall23" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 671.769, -29 )
+
+[node name="Wall24" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 729.58, -29 )
+
+[node name="Wall25" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 788.164, -29 )
+
+[node name="Wall26" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 846.748, -29 )
+
+[node name="Wall27" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 905.298, -29 )
+
+[node name="Wall28" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 963.69, -29 )
+
+[node name="Wall29" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1022.4, -29 )
+
+[node name="Wall30" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 30 )
+
+[node name="Wall31" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 88.326 )
+
+[node name="Wall32" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 146.586 )
+
+[node name="Wall33" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 205.15 )
+
+[node name="Wall34" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 263.608 )
+
+[node name="Wall35" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 321.857 )
+
+[node name="Wall36" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 379.884 )
+
+[node name="Wall37" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 437.998 )
+
+[node name="Wall38" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 495.995 )
+
+[node name="Wall39" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 554.342 )
+
+[node name="Wall40" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 1053, 612.858 )
+
+[node name="Wall41" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 994, 629 )
+
+[node name="Wall42" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 935.737, 629 )
+
+[node name="Wall43" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 877.265, 629 )
+
+[node name="Wall44" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 818.723, 629 )
+
+[node name="Wall45" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 760.316, 629 )
+
+[node name="Wall46" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 701.74, 629 )
+
+[node name="Wall47" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 643.438, 629 )
+
+[node name="Wall48" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 584.804, 629 )
+
+[node name="Wall49" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 526.241, 629 )
+
+[node name="Wall50" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 467.764, 629 )
+
+[node name="Wall51" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 409.074, 629 )
+
+[node name="Wall52" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 350.697, 629 )
+
+[node name="Wall53" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 292.199, 629 )
+
+[node name="Wall54" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 234.1, 629 )
+
+[node name="Wall55" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 175.498, 629 )
+
+[node name="Wall56" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 116.826, 629 )
+
+[node name="Wall57" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 58.557, 629 )
+
+[node name="Wall58" parent="Border" instance=ExtResource( 1 )]
+position = Vector2( 0.373, 629 )
+
+[node name="BombTimer" type="Timer" parent="."]
+wait_time = 60.0
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="TimeLabel" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Player/Area2D" to="Player" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Bomb" to="." method="_on_Bomb_body_entered"]
+
+[editable path="Player"]

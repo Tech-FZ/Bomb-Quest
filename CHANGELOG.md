@@ -1,5 +1,6 @@
 # Bomb Quest, Alpha 2
 - Added third level
+- As the Software Freedom Conservancy (SFC) states that Copilot is potentially stealing code (including code with licenses requiring author attribution and/or making the derivate open source as well), this program joined the campaign of the SFC. The code is for now, hosted on both GitHub and Codeberg which can be seen on README.md.
 
 # Bomb Quest, Alpha 1
 - Added armored player

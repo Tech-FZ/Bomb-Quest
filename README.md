@@ -4,6 +4,7 @@ This is a game where you have to neutralize bombs.
 ## Mirrors
 
 GitHub: https://github.com/Tech-FZ/Bomb-Quest
+
 Codeberg: https://codeberg.org/lucien-rowan/Bomb-Quest
 
 ## We're Using GitHub Under Protest

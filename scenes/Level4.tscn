@@ -1,0 +1,136 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/Level4.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Bomb.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Wall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/PlayerCam.gd" type="Script" id=6]
+[ext_resource path="res://scenes/Heart.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/SourceSerifPro/SourceSerifPro-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 27
+font_data = SubResource( 1 )
+
+[node name="Level4" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Border" type="Node2D" parent="."]
+
+[node name="Wall" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( -29, -29 )
+
+[node name="Wall2" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 28, -29 )
+
+[node name="Wall3" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 86, -29 )
+
+[node name="Wall4" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 143, -29 )
+
+[node name="Wall5" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 200, -29 )
+
+[node name="Wall6" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 257, -29 )
+
+[node name="Wall7" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 314, -29 )
+
+[node name="Wall8" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 371, -29 )
+
+[node name="Wall9" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 429, -29 )
+
+[node name="Wall10" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 487, -29 )
+
+[node name="Wall11" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 545, -29 )
+
+[node name="Wall12" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 602, -29 )
+
+[node name="Wall13" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 659, -29 )
+
+[node name="Wall14" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 716, -29 )
+
+[node name="Wall15" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 773, -29 )
+
+[node name="Wall16" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 830, -29 )
+
+[node name="Wall17" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 887, -29 )
+
+[node name="Wall18" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 944, -29 )
+
+[node name="Wall19" parent="Border" instance=ExtResource( 4 )]
+position = Vector2( 1002, -29 )
+
+[node name="Bomb" parent="." instance=ExtResource( 3 )]
+position = Vector2( 112, -518 )
+
+[node name="Bomb2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 112, -518 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 43.029, 492.514 )
+
+[node name="PlayerCam" type="Camera2D" parent="Player"]
+current = true
+script = ExtResource( 6 )
+
+[node name="HUD" type="Node2D" parent="Player/PlayerCam"]
+position = Vector2( -500.029, -286.514 )
+
+[node name="Hearts" type="Node2D" parent="Player/PlayerCam/HUD"]
+
+[node name="Heart" parent="Player/PlayerCam/HUD/Hearts" instance=ExtResource( 7 )]
+position = Vector2( 80, 23 )
+
+[node name="Heart2" parent="Player/PlayerCam/HUD/Hearts" instance=ExtResource( 7 )]
+position = Vector2( 115, 23 )
+
+[node name="Heart3" parent="Player/PlayerCam/HUD/Hearts" instance=ExtResource( 7 )]
+position = Vector2( 150, 23 )
+
+[node name="BombTimer" type="Timer" parent="Player/PlayerCam/HUD"]
+wait_time = 60.0
+
+[node name="StartTimer" type="Timer" parent="Player/PlayerCam/HUD"]
+wait_time = 3.0
+one_shot = true
+
+[node name="TimeLabel" type="Label" parent="Player/PlayerCam/HUD"]
+margin_left = 5.0
+margin_top = 4.0
+margin_right = 128.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="body_entered" from="Bomb" to="." method="_on_Bomb_body_entered"]
+[connection signal="body_entered" from="Bomb2" to="." method="_on_Bomb2_body_entered"]
+[connection signal="hud_should_not_turn" from="Player" to="Player/PlayerCam" method="_on_Player_hud_should_not_turn"]
+[connection signal="lost_heart" from="Player" to="." method="_on_Player_lost_heart"]
+[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Player/Area2D" to="Player" method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Player/PlayerWeaponRange" to="." method="_on_PlayerWeaponRange_body_entered"]
+[connection signal="timeout" from="Player/PlayerCam/HUD/BombTimer" to="." method="_on_BombTimer_timeout"]
+[connection signal="timeout" from="Player/PlayerCam/HUD/StartTimer" to="." method="_on_StartTimer_timeout"]
+
+[editable path="Player"]
